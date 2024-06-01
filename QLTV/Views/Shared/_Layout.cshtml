@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+    @Html.Partial("~/Views/Components/head.cshtml")
+    </head>
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper">
+
+        @Html.Partial("~/Views/Components/header.cshtml") 
+            <!-- /.navbar -->
+         @Html.Partial("~/Views/Components/sidebar.cshtml") 
+              <div class="content-wrapper">
+                  <section class="content" >
+                         @RenderBody()
+                  
+                  </section>
+
+
+              </div>
+            
+        </div>
+    <input type="hidden" id="errorString" value="@ViewData["error"]" />
+   @Html.Partial("~/Views/Components/footer.cshtml") 
+                     
+                         
+                        
+                         
+    </body>
+</html>
